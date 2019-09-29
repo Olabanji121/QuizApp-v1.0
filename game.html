@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link href="bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<title>Game</title>
+	</head>
+	<body>
+		<a href="/index.html"
+			><button type="button" class="btn btn-primary btn-lg btn-block">
+				HOME
+			</button></a
+		>
+
+		<div class="alert alert-dismissible alert-success right-pic container getmid">
+			<h5> <strong>Answer Recorded!!</strong> <br> please click Next for the Next Question</h5>
+		</div>
+		<div class="container getmid " id="checkAnswer">
+			<div id="scores"></div>
+			<div id="game" class="d-flex justify-content-center mt-5">
+				<div class="question-info" id="question">
+					What is the answer to this Question?
+				</div>
+			</div>
+
+			<div class="optionsContainer">
+				<p class="optionTag">A</p>
+				<button class="optionText">
+					choice 1
+					roejnhrfiojerijjierierjiojfgierjijgfierjifgejioigjeijrgijrigjieijigieio
+				</button>
+			</div>
+			<div class="optionsContainer">
+				<p class="optionTag">B</p>
+				<button class="optionText">choice 1</button>
+			</div>
+			<div class="optionsContainer">
+				<p class="optionTag">C</p>
+				<button class="optionText">choice 1</button>
+			</div>
+			<div class="optionsContainer">
+				<p class="optionTag">D</p>
+				<button class="optionText">choice 1</button>
+			</div>
+		</div>
+		<div class="navbtn container">
+			<button type="button" class="btn btn-info prev">Previous</button>
+			<button
+				type="button"
+				class="btn btn-info next"
+				data-toggle="modal"
+				data-target="close"
+			>
+				Next
+			</button>
+		</div>
+	</body>
+	<script src="/game.js"></script>
+</html>

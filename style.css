@@ -1,0 +1,60 @@
+.getmid{
+    margin-top: 5rem;
+    align-items: center;
+    /* display: flex */
+}
+
+h5{
+    text-align: center;
+}
+
+.optionsContainer{
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 5rem;
+    width: 100%;
+    
+    /* align-items: flex-start */
+}
+
+.optionText:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 238, 0.5)
+}
+
+
+.optionTag{
+    padding: 15px;
+    background-color: #1F9BCF;
+    color:#fff
+}
+
+.optionText{
+    background-color: rgb(240, 243, 242);
+    padding: 15px;
+    width: 80%;
+    color: #555
+}
+/* .optionText1,.optionText2, .optionText3,.optionText4{
+    background-color: aquamarine;
+    padding: 15px;
+    width: 80%
+} */
+
+.question-info{
+    background-color: #555;
+    padding: 30px;
+    color: #fff
+
+}
+
+.navbtn{
+    display: flex;
+    justify-content: space-between
+}
+
+#scores{
+    display: inline-block;
+    border: 2px solid rgb(112, 218, 213);
+    padding: 20px;
+}
