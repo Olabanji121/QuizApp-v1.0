@@ -85,7 +85,7 @@ prev.addEventListener("click", () => {
 let nextpic = document.querySelector('.right-pic')
 nextpic.style.display = "none";
 
-console.log(totalQuestion[index].questions);
+// console.log(totalQuestion[index].questions);
 startQuiz = () => {
 	loadDetails();
 
