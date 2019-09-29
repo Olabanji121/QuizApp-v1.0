@@ -11,7 +11,7 @@ h5{
 .optionsContainer{
     display: flex;
     margin-top: 1rem;
-    margin-left: 5rem;
+    /* margin-left: 1rem; */
     width: 100%;
     
     /* align-items: flex-start */
@@ -32,7 +32,7 @@ h5{
 .optionText{
     background-color: rgb(240, 243, 242);
     padding: 15px;
-    width: 80%;
+    width: 100%;
     color: #555
 }
 /* .optionText1,.optionText2, .optionText3,.optionText4{
