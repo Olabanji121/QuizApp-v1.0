@@ -52,7 +52,7 @@ let questions = [
 ];
 
 let totalQuestion = questions[Math.floor(Math.random() * questions.length)];
-
+let scoreUI = document.getElementById("scores");
 
 let index = 0;
 let score = 0
@@ -104,6 +104,7 @@ startQuiz = () => {
 			nextpic.style.display = "block"
 			score++
 			console.log(score)
+			scoreUI.textContent = `score: ${score}`
 		} else {
 			console.log("wrong");
 			// disableOpt.disabled = true;
