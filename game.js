@@ -140,15 +140,16 @@ startQuiz = () => {
 
 	const disableOpt = Array.from(document.querySelectorAll(".optionText"));
 	console.log(disableOpt);
-
+	
 	checkAnswer.addEventListener("click", e => {
 	
 		if (e.target.textContent === questions[index].answer) {
-			console.log("right");
-			if ( score !== 5 && index === 5) {
+			// console.log("right " + questions[index].answer);
+			if ( score !== 5 && index !==5) {
 				score++;
 			} else {
 				nextpic.style.display = "block";
+				nextpic.textContent = `YOUR SCORE IS ${score}`
 			}
 			
 			// console.log(score);
