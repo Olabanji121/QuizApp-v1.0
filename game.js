@@ -148,6 +148,7 @@ startQuiz = () => {
 			index++;
 			loadDetails();
 		}
+		
 	});
 };
 
@@ -165,6 +166,7 @@ loadDetails = () => {
 scoredisplay = () => {
 	if (index === 4) {
 		nextpic.style.display = "block";
+		scoreUI.style.display = "none";
 		nextpic.textContent = `YOUR SCORE IS ${score}`;
 	} else {
 		scoreUI.textContent = `score: ${score}`;
