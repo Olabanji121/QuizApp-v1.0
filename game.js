@@ -1,4 +1,3 @@
-
 let questionsList = [
 	{
 		question: "Inside which HTML element do we put the JavaScript??",
@@ -113,7 +112,6 @@ let questionsList = [
 	}
 ];
 
-
 let questions = [];
 
 while (questions.length < 5) {
@@ -123,12 +121,12 @@ while (questions.length < 5) {
 
 console.log(questions);
 
-
 let scoreUI = document.getElementById("scores");
 let pageUI = document.getElementById("pages");
 
 let index = 0;
 let score = 0;
+scoreUI.textContent = `score: ${score}`;
 let nextpic = document.querySelector(".right-pic");
 nextpic.style.display = "none";
 
@@ -136,39 +134,20 @@ startQuiz = () => {
 	loadDetails();
 
 	// checking answer//
-	const checkAnswer = document.getElementById("checkAnswer");
+	const checkAnswer = document.getElementById("ans");
 
-	const disableOpt = Array.from(document.querySelectorAll(".optionText"));
-	console.log(disableOpt);
-	
 	checkAnswer.addEventListener("click", e => {
-	
 		if (e.target.textContent === questions[index].answer) {
-			// console.log("right " + questions[index].answer);
-			if ( score !== 5 && index !==5) {
-				score++;
-			} else {
-				nextpic.style.display = "block";
-				nextpic.textContent = `YOUR SCORE IS ${score}`
+			score++;
+			scoredisplay();
+			if (index <= 4) {
+				index++;
+				loadDetails();
 			}
-			
-			// console.log(score);
-			scoreUI.textContent = `score: ${score}`;
-			if (index < questions.length -1) {
-				index++;
-				loadDetails();
-				
-			} 
 		} else {
-			if (index < questions.length - 1) {
-				index++;
-				loadDetails();
-				
-			} 
-			console.log("wrong");
-			
+			index++;
+			loadDetails();
 		}
-		
 	});
 };
 
@@ -176,15 +155,29 @@ loadDetails = () => {
 	let displayQuestion = document.getElementById("question");
 	displayQuestion.textContent = questions[index].question;
 	pageUI.textContent = `${index + 1}  / ${questions.length} `;
-	// console.log(totalQuestion.options)
-
 	let displayOptions = Array.from(document.querySelectorAll(".optionText"));
-	// console.log(displayOptions)
 
 	for (let i = 0; i < questions[index].options.length; i++) {
 		displayOptions[i].textContent = questions[index].options[i];
 	}
 };
+
+scoredisplay = () => {
+	if (index === 4) {
+		nextpic.style.display = "block";
+		nextpic.textContent = `YOUR SCORE IS ${score}`;
+	} else {
+		scoreUI.textContent = `score: ${score}`;
+	}
+	// if (score !== 5 && index !== 5) {
+	// 	scoreUI.textContent = `score: ${score}`;
+	// } else {
+	// 	nextpic.style.display = "block";
+	// 	nextpic.textContent = `YOUR SCORE IS ${score}`;
+	// }
+};
+
+scoredisplay();
 
 startQuiz();
 
