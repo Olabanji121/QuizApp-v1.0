@@ -1,7 +1,24 @@
+body{
+    background: url(https://c8.alamy.com/comp/P26062/trivia-word-cloud-concept-on-black-background-P26062.jpg)
+}
+
 .getmid{
     margin-top: 5rem;
     align-items: center;
-    /* display: flex */
+    /* display: flex */;
+    
+}
+
+#scores{
+    background-color: #fff
+}
+
+#pages{
+    color: #fff
+}
+
+h1{
+    color: #fff
 }
 
 h5{
