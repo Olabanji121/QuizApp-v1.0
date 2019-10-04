@@ -134,30 +134,51 @@ startQuiz = () => {
 	loadDetails();
 
 	// checking answer//
-	const checkAnswer = document.getElementById("ans");
-
-	checkAnswer.addEventListener("click", e => {
-		if (e.target.textContent === questions[index].answer) {
-			score++;
-			scoredisplay();
-			if (index <= questions.length - 1) {
+	// const checkAnswer = document.getElementById("ans");
+	document.querySelectorAll(".opt").forEach(e => {
+		
+		e.addEventListener("click", () => {
+			if (e.value === questions[index].answer) {
+				score++;
+				console.log(score)
+				scoredisplay();
+				if (index <= questions.length - 1) {
+					index++;
+					loadDetails();
+					// scoredisplay();
+				}
+			} else {
 				index++;
+				scoredisplay();
 				loadDetails();
-				// scoredisplay();
 			}
-		} else {
-			index++;
-			scoredisplay();
-			loadDetails();
-		}
+
+			// console.log(e.value)
+		});
 	});
+
+	// checkAnswer.addEventListener("click", e => {
+	// 	if (e.target.textContent === questions[index].answer) {
+	// 		score++;
+	// 		scoredisplay();
+	// 		if (index <= questions.length - 1) {
+	// 			index++;
+	// 			loadDetails();
+	// 			// scoredisplay();
+	// 		}
+	// 	} else {
+	// 		index++;
+	// 		scoredisplay();
+	// 		loadDetails();
+	// 	}
+	// });
 };
 
 loadDetails = () => {
 	let displayQuestion = document.getElementById("question");
 	displayQuestion.textContent = questions[index].question;
 	pageUI.textContent = `${index + 1}  / ${questions.length} `;
-	let displayOptions = Array.from(document.querySelectorAll(".optionText"));
+	let displayOptions = Array.from(document.querySelectorAll(".opt"));
 
 	for (let i = 0; i < questions[index].options.length; i++) {
 		displayOptions[i].textContent = questions[index].options[i];

@@ -10,7 +10,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		<title>Game</title>
 	</head>
-	<body>
+	<body class="game_body">
 		<a href="index.html"
 			><button type="button" class="btn btn-primary btn-lg btn-block">
 				HOME
@@ -23,34 +23,47 @@
 		<!-- <div class="alert alert-dismissible alert-success right-pic container getmid" id="poor">
 			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzFBnBOMng71PyxX7aL3XUGX_mJ2hVqq4bNH1vII4noBXrqxsG" alt="" width="500px">
 		</div> -->
-		<div class="container getmid " id="checkAnswer">
+		<div class="container gamecontainer getmid" id="checkAnswer">
 			<div id="scores"></div>
-			<div id="pages" class="badge badge-pill badge-success"></div>
+			<div id="pages" class="badge badge-pill badge-dark"></div>
 			<div id="game" class="d-flex justify-content-center mt-5">
 				<div class="question-info" id="question">
 					What is the answer to this Question?
 				</div>
 			</div>
 			<div id="ans">
-				<div class="optionsContainer">
-				<p class="optionTag">A</p>
-				<p class="optionText">
-					choice 1
-					roejnhrfiojerijjierierjiojfgierjijgfierjifgejioigjeijrgijrigjieijigieio
-				</p>
-			</div>
-			<div class="optionsContainer">
-				<p class="optionTag">B</p>
-				<p class="optionText">choice 1</p>
-			</div>
-			<div class="optionsContainer">
-				<p class="optionTag">C</p>
-				<p class="optionText">choice 1</p>
-			</div>
-			<div class="optionsContainer">
-				<p class="optionTag">D</p>
-				<p class="optionText">choice 1</p>
-			</div>
+				<label  class="opt optionText" for="option1">Option Value 1</label>
+		<input
+			type="radio"
+			name="questionOption"
+			class=" option"
+			id="option1"
+			value="Option Value 1"
+		/>
+		<label class="opt optionText " for="option2">Option Value 2</label>
+		<input
+			type="radio"
+			name="questionOption"
+			class="option"
+			id="option2"
+			value="Option Value 2"
+		/>
+		<label class="opt optionText" for="option3">Option Value 3</label>
+		<input
+			type="radio"
+			name="questionOption"
+			class=" option"
+			id="option3"
+			value="Option Value 3"
+		/>
+		<label class="opt optionText"  for="option4">Option Value 4</label>
+		<input
+			type="radio"
+			name="questionOption"
+			class=" option"
+			id="option4"
+			value="Option Value 4"
+		/>
 		</div>
 		</div>
 			
@@ -68,3 +81,22 @@
 	</body>
 	<script src="game.js"></script>
 </html>
+<!-- <div class="optionsContainer">
+				<p class="optionTag">A</p>
+				<p class="optionText">
+					choice 1
+					roejnhrfiojerijjierierjiojfgierjijgfierjifgejioigjeijrgijrigjieijigieio
+				</p>
+			</div>
+			<div class="optionsContainer">
+				<p class="optionTag">B</p>
+				<p class="optionText">choice 1</p>
+			</div>
+			<div class="optionsContainer">
+				<p class="optionTag">C</p>
+				<p class="optionText">choice 1</p>
+			</div>
+			<div class="optionsContainer">
+				<p class="optionTag">D</p>
+				<p class="optionText">choice 1</p>
+			</div> -->
