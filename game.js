@@ -140,18 +140,15 @@ startQuiz = () => {
 		if (e.target.textContent === questions[index].answer) {
 			score++;
 			scoredisplay();
-			if (index <= 4) {
+			if (index <= questions.length - 1) {
 				index++;
 				loadDetails();
 				// scoredisplay();
 			}
 		} else {
 			index++;
+			scoredisplay();
 			loadDetails();
-		}
-		
-		if (score === 0) {
-			console.log('failed')
 		}
 	});
 };
@@ -168,7 +165,7 @@ loadDetails = () => {
 };
 
 scoredisplay = () => {
-	if (index === 4) {
+	if (index === questions.length - 1) {
 		nextpic.style.display = "block";
 		scoreUI.style.display = "none";
 		nextpic.textContent = `YOUR SCORE IS ${score}`;
@@ -186,4 +183,3 @@ scoredisplay = () => {
 scoredisplay();
 
 startQuiz();
-
