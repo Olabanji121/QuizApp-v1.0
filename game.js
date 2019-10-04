@@ -143,12 +143,16 @@ startQuiz = () => {
 			if (index <= 4) {
 				index++;
 				loadDetails();
+				// scoredisplay();
 			}
 		} else {
 			index++;
 			loadDetails();
 		}
 		
+		if (score === 0) {
+			console.log('failed')
+		}
 	});
 };
 
