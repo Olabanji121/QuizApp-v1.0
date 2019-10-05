@@ -176,7 +176,7 @@ loadDetails = () => {
 
 scoredisplay = () => {
 	if (index === questions.length - 1) {
-		if (score >3) {
+		if (score >=3) {
 			nextpic.style.display = "block";
 			scoreUI.style.display = "none";
 			gamepage.style.display = "none";
@@ -198,5 +198,12 @@ scoredisplay = () => {
 scoredisplay();
 
 startQuiz();
+
+
+// Uncaught TypeError: Cannot read property 'question' of undefined
+//     at loadDetails (game.js:168)
+//     at HTMLDivElement.<anonymous> (game.js:161)
+// 14game.js:150 Uncaught TypeError: Cannot read property 'answer' of undefined
+//     at HTMLDivElement.<anonymous> (game.js:150)
 
 
