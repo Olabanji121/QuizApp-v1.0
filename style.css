@@ -2,6 +2,11 @@
     margin-top: 5rem;
     align-items: center;
     /* display: flex */
+    
+}
+
+.photo{
+    text-align: center
 }
 
 h5{
@@ -22,6 +27,9 @@ h5{
     box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 238, 0.5)
 }
 
+#playagain{
+    text-align: center
+}
 
 .optionTag{
     padding: 15px;
