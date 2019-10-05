@@ -134,8 +134,9 @@ startQuiz = () => {
 	loadDetails();
 
 	// checking answer//
-	// const checkAnswer = document.getElementById("ans");
-	document.querySelectorAll(".option").forEach(e => {
+	const checkAnswer = document.querySelectorAll(".option");
+	
+	checkAnswer.forEach(e => {
 		e.addEventListener("click", () => {
 			if (e.value === questions[index].answer) {
 				score++;
@@ -151,26 +152,10 @@ startQuiz = () => {
 				scoredisplay();
 				loadDetails();
 			}
-
-			// console.log(e.value)
 		});
 	});
 
-	// checkAnswer.addEventListener("click", e => {
-	// 	if (e.target.textContent === questions[index].answer) {
-	// 		score++;
-	// 		scoredisplay();
-	// 		if (index <= questions.length - 1) {
-	// 			index++;
-	// 			loadDetails();
-	// 			// scoredisplay();
-	// 		}
-	// 	} else {
-	// 		index++;
-	// 		scoredisplay();
-	// 		loadDetails();
-	// 	}
-	// });
+	
 };
 
 loadDetails = () => {
@@ -190,16 +175,11 @@ scoredisplay = () => {
 	if (index === questions.length - 1) {
 		nextpic.style.display = "block";
 		scoreUI.style.display = "none";
-		nextpic.textContent = `YOUR SCORE IS ${score}`;
+		// nextpic.textContent = `YOUR SCORE IS ${score}`;
 	} else {
 		scoreUI.textContent = `score: ${score}`;
 	}
-	// if (score !== 5 && index !== 5) {
-	// 	scoreUI.textContent = `score: ${score}`;
-	// } else {
-	// 	nextpic.style.display = "block";
-	// 	nextpic.textContent = `YOUR SCORE IS ${score}`;
-	// }
+	
 };
 
 scoredisplay();
