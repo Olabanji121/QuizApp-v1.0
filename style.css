@@ -1,8 +1,25 @@
+
+body{
+    background: url(https://c8.alamy.com/comp/P26062/trivia-word-cloud-concept-on-black-background-P26062.jpg)
+}
+.game_body{
+    background: url(https://vips.org/wp-content/uploads/2018/09/question-background.png)
+}
+.gamecontainer{
+    font-size: 18px !important ;
+    
+}
 .getmid{
     margin-top: 5rem;
     align-items: center;
-    /* display: flex */
+    /* display: flex */;
+    color: #BF410E;
+    font-size: 24px
     
+}
+/* ************** */
+.question-info,.opt{
+    font-size: 18px !important
 }
 
 .photo{
@@ -31,18 +48,78 @@ h5{
     text-align: center
 }
 
+
+
+
+/* **************** */
+#scores{
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.copy{
+    font-size: 10px
+}
+
+#scores{
+    background-color: #fff
+}
+
+#pages{
+    color: #fff
+}
+
+.option {
+	display: none;
+    }  
+    
+
+label {
+    display: block;
+    color: #555;
+    background-color: #fff;
+    padding: 15px;
+    width: 100%;
+	}
+h1{
+    color: #fff
+}
+
+h5{
+    text-align: center;
+}
+
+.optionsContainer{
+    display: flex;
+    margin-top: 1rem;
+    /* margin-left: 1rem; */
+    width: 100%;
+    
+    /* align-items: flex-start */
+}
+.opt{
+    margin: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.opt:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 238, 0.5)
+}
+
+
 .optionTag{
     padding: 15px;
     background-color: #1F9BCF;
     color:#fff
 }
 
-.optionText{
+/* .optionText{
     background-color: rgb(240, 243, 242);
     padding: 15px;
     width: 100%;
     color: #555
-}
+} */
 /* .optionText1,.optionText2, .optionText3,.optionText4{
     background-color: aquamarine;
     padding: 15px;
