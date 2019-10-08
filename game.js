@@ -120,7 +120,6 @@ while (questions.length < 5) {
 }
 
 console.log(questions);
-
 let scoreUI = document.getElementById("scores");
 let pageUI = document.getElementById("pages");
 
@@ -128,7 +127,26 @@ let index = 0;
 let score = 0;
 scoreUI.textContent = `score: ${score}`;
 let nextpic = document.querySelector(".right-pic");
+let poor = document.getElementById('poor');
+let gamepage = document.getElementById("checkAnswer");
+let playagain = document.getElementById('playagain');
+playagain.style.display = 'none';
+poor.style.display = 'none';
 nextpic.style.display = "none";
+
+playagain.addEventListener("click", e => {
+	startQuiz();
+	loadDetails();
+});
+
+// let scoreUI = document.getElementById("scores");
+// let pageUI = document.getElementById("pages");
+
+// let index = 0;
+// let score = 0;
+// scoreUI.textContent = `score: ${score}`;
+// let nextpic = document.querySelector(".right-pic");
+// nextpic.style.display = "none";
 
 startQuiz = () => {
 	loadDetails();
@@ -173,15 +191,38 @@ loadDetails = () => {
 
 scoredisplay = () => {
 	if (index === questions.length - 1) {
-		nextpic.style.display = "block";
-		scoreUI.style.display = "none";
+		if (score >= 3) {
+			nextpic.style.display = "block";
+			scoreUI.style.display = "none";
+			gamepage.style.display = "none";
+			playagain.style.display = "block";
+		} else {
+			poor.style.display = "block";
+			scoreUI.style.display = "none";
+			gamepage.style.display = "none";
+			playagain.style.display = "block";
+		}
+
 		// nextpic.textContent = `YOUR SCORE IS ${score}`;
 	} else {
 		scoreUI.textContent = `score: ${score}`;
 	}
-	
 };
+
+// scoredisplay = () => {
+// 	if (index === questions.length - 1) {
+// 		nextpic.style.display = "block";
+// 		scoreUI.style.display = "none";
+// 		// nextpic.textContent = `YOUR SCORE IS ${score}`;
+// 	} else {
+// 		scoreUI.textContent = `score: ${score}`;
+// 	}
+	
+// };
 
 scoredisplay();
 
 startQuiz();
+
+
+

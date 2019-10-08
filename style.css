@@ -16,7 +16,41 @@ body{
     font-size: 24px
     
 }
+/* ************** */
+.question-info,.opt{
+    font-size: 18px !important
+}
 
+.photo{
+    text-align: center
+}
+
+h5{
+    text-align: center;
+}
+
+.optionsContainer{
+    display: flex;
+    margin-top: 1rem;
+    /* margin-left: 1rem; */
+    width: 100%;
+    
+    /* align-items: flex-start */
+}
+
+.optionText:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 238, 0.5)
+}
+
+#playagain{
+    text-align: center
+}
+
+
+
+
+/* **************** */
 #scores{
     border-radius: 5px;
     font-size: 20px;
