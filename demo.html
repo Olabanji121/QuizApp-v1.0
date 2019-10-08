@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+
+		<style>
+			.option {
+				/* display: none; */
+			}
+			label {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<label for="option1">Option Value 1</label>
+		<input
+			type="radio"
+			name="questionOption"
+			class="option"
+			id="option1"
+			value="Option Value 1"
+		/>
+		<label for="option2">Option Value 2</label>
+		<input
+			type="radio"
+			name="questionOption"
+			class="option"
+			id="option2"
+			value="Option Value 2"
+		/>
+		<label for="option3">Option Value 3</label>
+		<input
+			type="radio"
+			name="questionOption"
+			class="option"
+			id="option3"
+			value="Option Value 3"
+		/>
+		<label for="option4">Option Value 4</label>
+		<input
+			type="radio"
+			name="questionOption"
+			class="option"
+			id="option4"
+			value="Option Value 4"
+		/>
+
+		<script>
+			document.querySelectorAll(".option").forEach(e => {
+				e.addEventListener("click", () => {
+					alert(`radio button clicked => ${e.value}`);
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -120,7 +120,6 @@ while (questions.length < 5) {
 }
 
 console.log(questions);
-
 let scoreUI = document.getElementById("scores");
 let pageUI = document.getElementById("pages");
 
@@ -140,43 +139,53 @@ playagain.addEventListener("click", e => {
 	loadDetails();
 });
 
+
 startQuiz = () => {
 	loadDetails();
 
 	// checking answer//
-	const checkAnswer = document.getElementById("ans");
-
-	checkAnswer.addEventListener("click", e => {
-		if (e.target.textContent === questions[index].answer) {
-			score++;
-			scoredisplay();
-			if (index <= questions.length - 1) {
+	const checkAnswer = document.querySelectorAll(".option");
+	
+	checkAnswer.forEach(e => {
+		e.addEventListener("click", () => {
+			if (e.value === questions[index].answer) {
+				score++;
+				console.log(score);
+				scoredisplay();
+				if (index <= questions.length - 1) {
+					index++;
+					loadDetails();
+					// scoredisplay();
+				}
+			} else {
 				index++;
+				scoredisplay();
 				loadDetails();
-				// scoredisplay();
 			}
-		} else {
-			index++;
-			scoredisplay();
-			loadDetails();
-		}
+		});
 	});
+
+	
 };
 
 loadDetails = () => {
 	let displayQuestion = document.getElementById("question");
 	displayQuestion.textContent = questions[index].question;
 	pageUI.textContent = `${index + 1}  / ${questions.length} `;
-	let displayOptions = Array.from(document.querySelectorAll(".optionText"));
+	let displayOptions = Array.from(document.querySelectorAll(".opt"));
+	let optionValue = Array.from(document.querySelectorAll(".option"));
 
 	for (let i = 0; i < questions[index].options.length; i++) {
 		displayOptions[i].textContent = questions[index].options[i];
+		optionValue[i].value = questions[index].options[i];
 	}
 };
 
 scoredisplay = () => {
 	if (index === questions.length - 1) {
-		if (score >3) {
+
+		if (score >= 3) {
+
 			nextpic.style.display = "block";
 			scoreUI.style.display = "none";
 			gamepage.style.display = "none";
@@ -187,16 +196,14 @@ scoredisplay = () => {
 			gamepage.style.display = "none";
 			playagain.style.display = "block";
 		}
-		
-		// nextpic.textContent = `YOUR SCORE IS ${score}`;
 	} else {
 		scoreUI.textContent = `score: ${score}`;
 	}
-	
-};
+
 
 scoredisplay();
 
 startQuiz();
+
 
 

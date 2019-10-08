@@ -10,19 +10,19 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		<title>Game</title>
 	</head>
-	<body>
+	<body class="game_body">
 		<a href="index.html"
 			><button type="button" class="btn btn-primary btn-lg btn-block">
 				HOME
 			</button></a
 		>
-
-		<div class=" right-pic container getmid photo">
+		
+			<div class=" right-pic container getmid photo">
 			<img src="https://netstorage-yen.akamaized.net/images/3o3bpd5jb5d0oar35.jpg?imwidth=1200" alt="" width="500px">
 		</div>
 		<div class=" right-pic container getmid photo" id="poor">
 			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzFBnBOMng71PyxX7aL3XUGX_mJ2hVqq4bNH1vII4noBXrqxsG" alt="" width="500px">
-		</div>
+
 		<div id="playagain" class="container">
 			<a href="game.html" ><button type="button" class="btn btn-success">Play Again</button></a>
 		</div>
@@ -35,28 +35,41 @@
 				</div>
 			</div>
 			<div id="ans">
-				<div class="optionsContainer">
-				<p class="optionTag">A</p>
-				<p class="optionText">
-					choice 1
-					roejnhrfiojerijjierierjiojfgierjijgfierjifgejioigjeijrgijrigjieijigieio
-				</p>
-			</div>
-			<div class="optionsContainer">
-				<p class="optionTag">B</p>
-				<p class="optionText">choice 1</p>
-			</div>
-			<div class="optionsContainer">
-				<p class="optionTag">C</p>
-				<p class="optionText">choice 1</p>
-			</div>
-			<div class="optionsContainer">
-				<p class="optionTag">D</p>
-				<p class="optionText">choice 1</p>
+				<label class="opt optionText" for="option1">Option Value 1</label>
+				<input
+					type="radio"
+					name="questionOption"
+					class="option"
+					id="option1"
+					value="Option Value 1"
+				/>
+				<label class="opt optionText " for="option2">Option Value 2</label>
+				<input
+					type="radio"
+					name="questionOption"
+					class="option"
+					id="option2"
+					value="Option Value 2"
+				/>
+				<label class="opt optionText" for="option3">Option Value 3</label>
+				<input
+					type="radio"
+					name="questionOption"
+					class=" option"
+					id="option3"
+					value="Option Value 3"
+				/>
+				<label class="opt optionText" for="option4">Option Value 4</label>
+				<input
+					type="radio"
+					name="questionOption"
+					class=" option"
+					id="option4"
+					value="Option Value 4"
+				/>
 			</div>
 		</div>
-			</div>
-			
+
 		<!-- <div class="navbtn container">
 			<button type="button" class="btn btn-info prev">Previous</button>
 			<button
