@@ -139,12 +139,12 @@ playagain.addEventListener("click", e => {
 	loadDetails();
 });
 
-
 startQuiz = () => {
 	loadDetails();
 
 	// checking answer//
 	const checkAnswer = document.querySelectorAll(".option");
+
 	checkAnswer.forEach(e => {
 		e.addEventListener("click", () => {
 			if (e.value === questions[index].answer) {
@@ -163,8 +163,6 @@ startQuiz = () => {
 			}
 		});
 	});
-
-	
 };
 
 loadDetails = () => {
