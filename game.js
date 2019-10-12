@@ -1,3 +1,4 @@
+
 let questionsList = [
 	{
 		question: "Inside which HTML element do we put the JavaScript??",
@@ -130,6 +131,7 @@ let nextpic = document.querySelector(".right-pic");
 let poor = document.getElementById("poor");
 let gamepage = document.getElementById("checkAnswer");
 let playagain = document.getElementById("playagain");
+
 playagain.style.display = "none";
 poor.style.display = "none";
 nextpic.style.display = "none";
@@ -152,14 +154,19 @@ startQuiz = () => {
 				console.log(score);
 				scoredisplay();
 				if (index <= questions.length - 1) {
-					index++;
+					if (index < 4) {
+						index++;
+					}
 					loadDetails();
 					// scoredisplay();
 				}
 			} else {
-				index++;
+				if (index < 4) {
+					index++;
+				}
 				scoredisplay();
 				loadDetails();
+				// console.log('hi')
 			}
 		});
 	});
@@ -167,6 +174,7 @@ startQuiz = () => {
 
 loadDetails = () => {
 	let displayQuestion = document.getElementById("question");
+	console.log(index)
 	displayQuestion.textContent = questions[index].question;
 	pageUI.textContent = `${index + 1}  / ${questions.length} `;
 	let displayOptions = Array.from(document.querySelectorAll(".opt"));
@@ -199,3 +207,5 @@ scoredisplay = () => {
 scoredisplay();
 
 startQuiz();
+
+
